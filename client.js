@@ -16,6 +16,15 @@ const connect = function () {
   conn.on("connect", () => {
     //write my snake name to the server
     conn.write(`Name: viv`);
+    //write to the server to move up the snake position
+    // setInterval(() =>{
+    //   conn.write(`Move: up`);
+    //       }, 2000
+    // )
+    // setTimeout(()=> {
+    //   conn.write(`Move: right`);
+    // }, 2000)
+
         // code that print a sucess message to cli when the connection is first established
     console.log('Successfully connected to game server');
   });
