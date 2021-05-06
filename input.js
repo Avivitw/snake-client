@@ -1,3 +1,5 @@
+const { COMMANDS } = require("./constants");
+
 // Stores the active TCP connection object.
 let connection;
 
@@ -13,15 +15,7 @@ const setupInput = function(conn) {
   return stdin;
 };
 
-const commands = {
-  'w': 'Move: up',
-  'a': 'Move: left',
-  's': 'Move: down',
-  'd': 'Move: right',
-  'p': `Say: I'm great`,
-  'o': `Say: What's uuuuuppppp?`,
-  
-};
+
   
 const handleUserInput = function(key) {
   if (key === '\u0003') {
@@ -29,9 +23,9 @@ const handleUserInput = function(key) {
   }
   console.log('key', key);
   
-  if (commands[key]) {
-    console.log('commands[key]', commands[key]);
-    connection.write(commands[key]);
+  if (COMMANDS[key]) {
+    console.log('COMMANDS[key]', COMMANDS[key]);
+    connection.write(COMMANDS[key]);
   }
 };
 
