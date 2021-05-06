@@ -17,7 +17,9 @@ const commands = {
   'w': 'Move: up',
   'a': 'Move: left',
   's': 'Move: down',
-  'd': 'Move: right'
+  'd': 'Move: right',
+  'p': `Say: I'm great`,
+  'o': `Say: What's uuuuuppppp?`,
   
 };
   
